@@ -48,7 +48,7 @@ Create the Firebase firestore database and setup the default rules. Choose produ
 
 #### Setup the rules 
 
-```json
+```javascript
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {

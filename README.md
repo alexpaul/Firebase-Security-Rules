@@ -32,23 +32,34 @@ Go to [Firebase console](https://console.firebase.google.com/u/0/) and create a 
 
 Create a new Xcode project called **BBQMeetup**. 
 
-## 3. Add the necessary Firebase Pods
+## 3. Initialize CocoaPods withing the project in Terminal and add the following Firebase Pods
 
-Add the following pods: 
+#### Initialize pods 
+
+```
+pod init  
+```
+
+Add the following pods to the Podfile and run `pod install`: 
 
 ```ruby 
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 ```
 
+Close your Xcode project and now open the .xcworkspace file to continue working with the BBQMeetup app. 
+
 ## 4. Configure your Xcode project and Firebase 
+
+Add the following to the AppDelegage.swift file 
 
 ```swift 
 import Firebase 
 
 class AppDelegate {
-  func applicationDidFinishLaunching() {
-    FirebaseApp.configure() 
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    FirebaseApp.configure()
+    return true
   }
 }
 ```
@@ -56,6 +67,7 @@ class AppDelegate {
 ## 5. Configure Firebase Authentication
 
 Setup sign in method to be email and password. 
+
 
 
 ## 6. Configure Firebase Firestore
@@ -73,6 +85,18 @@ service cloud.firestore {
     }
   }
 }
+```
+
+## 7. Add the following asychronous test 
+
+#### Add a Unit Test Target and create an asynchronous test to authenticate and add a user to the users collection 
+
+```swift 
+```
+
+#### Create an asynchronous test to add an item to the items collections 
+
+```swift 
 ```
 
 ## Resources 

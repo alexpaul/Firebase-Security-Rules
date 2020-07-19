@@ -38,5 +38,15 @@ extension Item {
     self.servings = servings
     self.type = type
   }
-  
+}
+
+extension Item {
+  var itemDict: [String: Any] {
+    ["name": name,
+     "personId": personId,
+     "servings": servings,
+     "itemId": itemId,
+     "type": type
+    ]
+  }
 }

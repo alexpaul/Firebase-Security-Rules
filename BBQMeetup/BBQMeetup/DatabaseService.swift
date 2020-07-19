@@ -18,6 +18,16 @@ class DatabaseService {
   private init() {}
   static let shared = DatabaseService()
   
+  func addItem(item: Item, completion: @escaping (Result<Bool, Error>) -> ()) {
+    Firestore.firestore().collection(Collection.items).document(item.itemId).setData(item.itemDict) { (error) in
+      if let error = error {
+        completion(.failure(error))
+      } else {
+        completion(.success(true))
+      }
+    }
+  }
+  
   func deleteItem(item: Item, completion: @escaping (Result<Bool, Error>) -> ()) {
     Firestore.firestore().collection(Collection.items).document(item.itemId).delete { (error) in
       if let error = error {

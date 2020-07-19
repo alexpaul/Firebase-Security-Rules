@@ -40,9 +40,10 @@ class BBQItemsViewController: UIViewController {
     dataSource = DataSource(tableView: tableView, cellProvider: { (tableView, indexPath, item) -> UITableViewCell? in
       let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath)
       cell.textLabel?.text = item.name
+      cell.detailTextLabel?.text = item.personId
       return cell
     })
-    
+    dataSource.defaultRowAnimation = .fade
     var snapshot = NSDiffableDataSourceSnapshot<ItemType, Item>()
     for type in ItemType.allCases {
       snapshot.appendSections([type])
@@ -65,6 +66,19 @@ class BBQItemsViewController: UIViewController {
 
 extension BBQItemsViewController: AddItemViewControllerDelegate {
   func didAddItem(_ addItemViewController: AddItemViewController, item: Item) {
-    dump(item)
+    guard let itemType = ItemType(rawValue: item.type) else {
+      return
+    }
+    DatabaseService.shared.addItem(item: item) { [weak self] (result) in
+      guard let self = self else { return }
+      switch result {
+      case .failure(let error):
+        print(error)
+      case .success:
+        var snapshot = self.dataSource.snapshot()
+        snapshot.appendItems([item], toSection: itemType)
+        self.dataSource.apply(snapshot, animatingDifferences: true)
+      }
+    }
   }
 }

@@ -19,6 +19,13 @@ class BBQItemsViewController: UIViewController {
     fetchItems()
   }
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    guard let addItemVC = segue.destination as? AddItemViewController else {
+      fatalError("could not segue to AddItemViewController")
+    }
+    addItemVC.delegate = self
+  }
+  
   private func fetchItems() {
     Firestore.firestore().collection(Collection.items).addSnapshotListener { [weak self] (querySnapshot, error) in
       if let error = error {
@@ -54,5 +61,10 @@ class BBQItemsViewController: UIViewController {
     }
     dataSource.apply(snapshot, animatingDifferences: false)
   }
-  
+}
+
+extension BBQItemsViewController: AddItemViewControllerDelegate {
+  func didAddItem(_ addItemViewController: AddItemViewController, item: Item) {
+    dump(item)
+  }
 }

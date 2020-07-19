@@ -46,6 +46,61 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
+        <!--Add Item View Controller-->
+        <scene sceneID="tBI-kq-GkM">
+            <objects>
+                <viewController id="px6-fF-J8d" customClass="AddItemViewController" customModule="BBQMeetup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x3r-T3-XvF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What item are you bringing?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOd-Oc-NV3">
+                                <rect key="frame" x="20" y="60" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What type of item are you bringing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxR-RV-kIJ">
+                                <rect key="frame" x="20" y="114" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0iK-T8-3qK">
+                                <rect key="frame" x="0.0" y="143" width="414" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJk-F5-9PE">
+                                <rect key="frame" x="135.5" y="367" width="143" height="30"/>
+                                <state key="normal" title="Add Item to BBQ List"/>
+                                <connections>
+                                    <action selector="addItemToBBQList:" destination="px6-fF-J8d" eventType="touchUpInside" id="mKT-39-uh0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EOd-Oc-NV3" firstAttribute="top" secondItem="0my-mQ-BlT" secondAttribute="top" constant="60" id="5mv-Uw-7bb"/>
+                            <constraint firstItem="0my-mQ-BlT" firstAttribute="trailing" secondItem="EOd-Oc-NV3" secondAttribute="trailing" constant="20" id="JNL-0E-EZU"/>
+                            <constraint firstItem="jxR-RV-kIJ" firstAttribute="top" secondItem="EOd-Oc-NV3" secondAttribute="bottom" constant="20" id="JZl-Ko-YZu"/>
+                            <constraint firstItem="0iK-T8-3qK" firstAttribute="top" secondItem="jxR-RV-kIJ" secondAttribute="bottom" constant="8" id="OJ8-cE-igY"/>
+                            <constraint firstItem="OJk-F5-9PE" firstAttribute="top" secondItem="0iK-T8-3qK" secondAttribute="bottom" constant="8" id="QgP-UR-Ryv"/>
+                            <constraint firstItem="jxR-RV-kIJ" firstAttribute="leading" secondItem="0my-mQ-BlT" secondAttribute="leading" constant="20" id="U5u-Z9-M2S"/>
+                            <constraint firstItem="EOd-Oc-NV3" firstAttribute="leading" secondItem="0my-mQ-BlT" secondAttribute="leading" constant="20" id="Xn4-Gk-V7e"/>
+                            <constraint firstItem="OJk-F5-9PE" firstAttribute="centerX" secondItem="x3r-T3-XvF" secondAttribute="centerX" id="d9g-Yd-vyA"/>
+                            <constraint firstItem="0my-mQ-BlT" firstAttribute="trailing" secondItem="jxR-RV-kIJ" secondAttribute="trailing" constant="20" id="gyE-Nl-DRw"/>
+                            <constraint firstItem="0iK-T8-3qK" firstAttribute="leading" secondItem="0my-mQ-BlT" secondAttribute="leading" id="hyv-K8-MmH"/>
+                            <constraint firstItem="0iK-T8-3qK" firstAttribute="trailing" secondItem="0my-mQ-BlT" secondAttribute="trailing" id="jEa-Ld-3Nv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0my-mQ-BlT"/>
+                    </view>
+                    <connections>
+                        <outlet property="itemNameTextField" destination="EOd-Oc-NV3" id="lc5-tu-CAl"/>
+                        <outlet property="pickerView" destination="0iK-T8-3qK" id="ltu-kf-Blc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bYz-O0-s6e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1897.1014492753625" y="-531.69642857142856"/>
+        </scene>
         <!--BBQ Items-->
         <scene sceneID="Y5h-lw-Fp6">
             <objects>
@@ -78,7 +133,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OEW-xU-UWc"/>
                     </view>
-                    <navigationItem key="navigationItem" title="BBQ Items" id="eE9-Xc-cGT"/>
+                    <navigationItem key="navigationItem" title="BBQ Items" id="eE9-Xc-cGT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ta5-w7-mdJ">
+                            <connections>
+                                <segue destination="px6-fF-J8d" kind="presentation" id="cE8-ku-EKh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="84d-zn-Jrz" id="C5Z-8i-Qrn"/>
                     </connections>

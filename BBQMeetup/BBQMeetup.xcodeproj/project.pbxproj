@@ -12,6 +12,7 @@
 		57EA62AD24C4EF8000670375 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA62AC24C4EF8000670375 /* Item.swift */; };
 		57EA62AF24C4EFD900670375 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA62AE24C4EFD900670375 /* ItemType.swift */; };
 		57EA62B124C4F51300670375 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA62B024C4F51300670375 /* DataSource.swift */; };
+		57EA62B324C5076500670375 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA62B224C5076500670375 /* AddItemViewController.swift */; };
 		57F82D8824C4830B004C443A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F82D8724C4830B004C443A /* AppDelegate.swift */; };
 		57F82D8A24C4830B004C443A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F82D8924C4830B004C443A /* SceneDelegate.swift */; };
 		57F82D8C24C4830B004C443A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F82D8B24C4830B004C443A /* LoginViewController.swift */; };
@@ -44,6 +45,7 @@
 		57EA62AC24C4EF8000670375 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		57EA62AE24C4EFD900670375 /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
 		57EA62B024C4F51300670375 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		57EA62B224C5076500670375 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		57F82D8424C4830B004C443A /* BBQMeetup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBQMeetup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F82D8724C4830B004C443A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57F82D8924C4830B004C443A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				57F82D8924C4830B004C443A /* SceneDelegate.swift */,
 				57F82D8B24C4830B004C443A /* LoginViewController.swift */,
 				57F82DB124C4EBCA004C443A /* BBQItemsViewController.swift */,
+				57EA62B224C5076500670375 /* AddItemViewController.swift */,
 				57EA62AA24C4EF0B00670375 /* DatabaseService.swift */,
 				57EA62B024C4F51300670375 /* DataSource.swift */,
 				57EA62AE24C4EFD900670375 /* ItemType.swift */,
@@ -329,6 +332,7 @@
 				57EA62AB24C4EF0B00670375 /* DatabaseService.swift in Sources */,
 				57F82DB224C4EBCA004C443A /* BBQItemsViewController.swift in Sources */,
 				57F82D8824C4830B004C443A /* AppDelegate.swift in Sources */,
+				57EA62B324C5076500670375 /* AddItemViewController.swift in Sources */,
 				57EA62AD24C4EF8000670375 /* Item.swift in Sources */,
 				57EA62B124C4F51300670375 /* DataSource.swift in Sources */,
 				57F82D8A24C4830B004C443A /* SceneDelegate.swift in Sources */,

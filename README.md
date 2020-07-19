@@ -251,4 +251,4 @@ func testAddItemForLoggedInUser() {
 
 ## Resources 
 
-[Firebase Seurity Rules](https://firebase.google.com/docs/rules)
+[Firebase Security Rules](https://firebase.google.com/docs/rules)

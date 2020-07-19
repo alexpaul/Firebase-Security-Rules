@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		10E7F85EE0440B1C3E85291F /* Pods_BBQMeetup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0205DC7F49BF2E5D699C674C /* Pods_BBQMeetup.framework */; };
+		57EA62AB24C4EF0B00670375 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA62AA24C4EF0B00670375 /* DatabaseService.swift */; };
+		57EA62AD24C4EF8000670375 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA62AC24C4EF8000670375 /* Item.swift */; };
+		57EA62AF24C4EFD900670375 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA62AE24C4EFD900670375 /* ItemType.swift */; };
+		57EA62B124C4F51300670375 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA62B024C4F51300670375 /* DataSource.swift */; };
 		57F82D8824C4830B004C443A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F82D8724C4830B004C443A /* AppDelegate.swift */; };
 		57F82D8A24C4830B004C443A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F82D8924C4830B004C443A /* SceneDelegate.swift */; };
 		57F82D8C24C4830B004C443A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F82D8B24C4830B004C443A /* LoginViewController.swift */; };
@@ -36,6 +40,10 @@
 		0205DC7F49BF2E5D699C674C /* Pods_BBQMeetup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBQMeetup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4877AECB3F30071329E3C7 /* Pods_BBQMeetupTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBQMeetupTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		449FA2C407278B42114B85B3 /* Pods-BBQMeetupTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBQMeetupTests.debug.xcconfig"; path = "Target Support Files/Pods-BBQMeetupTests/Pods-BBQMeetupTests.debug.xcconfig"; sourceTree = "<group>"; };
+		57EA62AA24C4EF0B00670375 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		57EA62AC24C4EF8000670375 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		57EA62AE24C4EFD900670375 /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
+		57EA62B024C4F51300670375 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		57F82D8424C4830B004C443A /* BBQMeetup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBQMeetup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F82D8724C4830B004C443A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57F82D8924C4830B004C443A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +122,10 @@
 				57F82D8924C4830B004C443A /* SceneDelegate.swift */,
 				57F82D8B24C4830B004C443A /* LoginViewController.swift */,
 				57F82DB124C4EBCA004C443A /* BBQItemsViewController.swift */,
+				57EA62AA24C4EF0B00670375 /* DatabaseService.swift */,
+				57EA62B024C4F51300670375 /* DataSource.swift */,
+				57EA62AE24C4EFD900670375 /* ItemType.swift */,
+				57EA62AC24C4EF8000670375 /* Item.swift */,
 				57F82D8D24C4830B004C443A /* Main.storyboard */,
 				57F82D9024C4830E004C443A /* Assets.xcassets */,
 				57F82D9224C4830E004C443A /* LaunchScreen.storyboard */,
@@ -312,9 +324,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57EA62AF24C4EFD900670375 /* ItemType.swift in Sources */,
 				57F82D8C24C4830B004C443A /* LoginViewController.swift in Sources */,
+				57EA62AB24C4EF0B00670375 /* DatabaseService.swift in Sources */,
 				57F82DB224C4EBCA004C443A /* BBQItemsViewController.swift in Sources */,
 				57F82D8824C4830B004C443A /* AppDelegate.swift in Sources */,
+				57EA62AD24C4EF8000670375 /* Item.swift in Sources */,
+				57EA62B124C4F51300670375 /* DataSource.swift in Sources */,
 				57F82D8A24C4830B004C443A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,7 +425,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -463,7 +479,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -481,6 +497,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZEKMNK5YD3;
 				INFOPLIST_FILE = BBQMeetup/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -500,6 +517,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZEKMNK5YD3;
 				INFOPLIST_FILE = BBQMeetup/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

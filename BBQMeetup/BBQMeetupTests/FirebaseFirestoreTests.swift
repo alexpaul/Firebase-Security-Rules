@@ -9,6 +9,7 @@
 import XCTest
 import FirebaseAuth
 import FirebaseFirestore
+@testable import BBQMeetup
 
 class FirebaseFirestoreTests: XCTestCase {
   
@@ -53,20 +54,12 @@ class FirebaseFirestoreTests: XCTestCase {
   
   func testAddItemForLoggedInUser() {
     // arrange
-    enum ItemType: String, CaseIterable {
-      case seafood
-      case drink
-      case meat
-      case game
-      case dessert
-    }
-    
     let collectionName = "items"
     let exp = XCTestExpectation(description: "item added")
     guard let user = Auth.auth().currentUser else { return }
     let itemId = UUID().uuidString
-    let itemDict: [String: Any] = ["name": "Grilled Salmon",
-                                   "type": ItemType.seafood.rawValue,
+    let itemDict: [String: Any] = ["name": "Dominoes",
+                                   "type": ItemType.game.rawValue,
                                    "personId": user.uid,
                                    "servings": 4,
                                    "itemId": itemId

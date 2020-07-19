@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10E7F85EE0440B1C3E85291F /* Pods_BBQMeetup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0205DC7F49BF2E5D699C674C /* Pods_BBQMeetup.framework */; };
+		57F82D8824C4830B004C443A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F82D8724C4830B004C443A /* AppDelegate.swift */; };
+		57F82D8A24C4830B004C443A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F82D8924C4830B004C443A /* SceneDelegate.swift */; };
+		57F82D8C24C4830B004C443A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F82D8B24C4830B004C443A /* LoginViewController.swift */; };
+		57F82D8F24C4830B004C443A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57F82D8D24C4830B004C443A /* Main.storyboard */; };
+		57F82D9124C4830E004C443A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57F82D9024C4830E004C443A /* Assets.xcassets */; };
+		57F82D9424C4830E004C443A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57F82D9224C4830E004C443A /* LaunchScreen.storyboard */; };
+		57F82DA224C483B4004C443A /* BBQMeetupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F82DA124C483B4004C443A /* BBQMeetupTests.swift */; };
+		57F82DAA24C483E9004C443A /* FirebaseAuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F82DA924C483E9004C443A /* FirebaseAuthenticationTests.swift */; };
+		57F82DAC24C483FE004C443A /* FirebaseFirestoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F82DAB24C483FE004C443A /* FirebaseFirestoreTests.swift */; };
+		57F82DB024C4DD04004C443A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57F82DAF24C4DD04004C443A /* GoogleService-Info.plist */; };
+		57F82DB224C4EBCA004C443A /* BBQItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F82DB124C4EBCA004C443A /* BBQItemsViewController.swift */; };
+		85E4EA7735D93EA26E44EAD5 /* Pods_BBQMeetupTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4877AECB3F30071329E3C7 /* Pods_BBQMeetupTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		57F82DA424C483B4004C443A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57F82D7C24C4830B004C443A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57F82D8324C4830B004C443A;
+			remoteInfo = BBQMeetup;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0205DC7F49BF2E5D699C674C /* Pods_BBQMeetup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBQMeetup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D4877AECB3F30071329E3C7 /* Pods_BBQMeetupTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBQMeetupTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		449FA2C407278B42114B85B3 /* Pods-BBQMeetupTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBQMeetupTests.debug.xcconfig"; path = "Target Support Files/Pods-BBQMeetupTests/Pods-BBQMeetupTests.debug.xcconfig"; sourceTree = "<group>"; };
+		57F82D8424C4830B004C443A /* BBQMeetup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBQMeetup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57F82D8724C4830B004C443A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		57F82D8924C4830B004C443A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		57F82D8B24C4830B004C443A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		57F82D8E24C4830B004C443A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		57F82D9024C4830E004C443A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57F82D9324C4830E004C443A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		57F82D9524C4830E004C443A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57F82D9F24C483B4004C443A /* BBQMeetupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBQMeetupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57F82DA124C483B4004C443A /* BBQMeetupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBQMeetupTests.swift; sourceTree = "<group>"; };
+		57F82DA324C483B4004C443A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57F82DA924C483E9004C443A /* FirebaseAuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthenticationTests.swift; sourceTree = "<group>"; };
+		57F82DAB24C483FE004C443A /* FirebaseFirestoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreTests.swift; sourceTree = "<group>"; };
+		57F82DAF24C4DD04004C443A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		57F82DB124C4EBCA004C443A /* BBQItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBQItemsViewController.swift; sourceTree = "<group>"; };
+		78A1B904D570E748D6665815 /* Pods-BBQMeetupTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBQMeetupTests.release.xcconfig"; path = "Target Support Files/Pods-BBQMeetupTests/Pods-BBQMeetupTests.release.xcconfig"; sourceTree = "<group>"; };
+		95AE03FC076D5DB9D5146D46 /* Pods-BBQMeetup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBQMeetup.debug.xcconfig"; path = "Target Support Files/Pods-BBQMeetup/Pods-BBQMeetup.debug.xcconfig"; sourceTree = "<group>"; };
+		DF0A74333BEA49771861D775 /* Pods-BBQMeetup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBQMeetup.release.xcconfig"; path = "Target Support Files/Pods-BBQMeetup/Pods-BBQMeetup.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57F82D8124C4830B004C443A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10E7F85EE0440B1C3E85291F /* Pods_BBQMeetup.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57F82D9C24C483B4004C443A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E4EA7735D93EA26E44EAD5 /* Pods_BBQMeetupTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3286B9E88E3EA803FEDEA8E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95AE03FC076D5DB9D5146D46 /* Pods-BBQMeetup.debug.xcconfig */,
+				DF0A74333BEA49771861D775 /* Pods-BBQMeetup.release.xcconfig */,
+				449FA2C407278B42114B85B3 /* Pods-BBQMeetupTests.debug.xcconfig */,
+				78A1B904D570E748D6665815 /* Pods-BBQMeetupTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		57F82D7B24C4830B004C443A = {
+			isa = PBXGroup;
+			children = (
+				57F82D8624C4830B004C443A /* BBQMeetup */,
+				57F82DA024C483B4004C443A /* BBQMeetupTests */,
+				57F82D8524C4830B004C443A /* Products */,
+				3286B9E88E3EA803FEDEA8E4 /* Pods */,
+				8DE89F8D0E129D581A17BEE1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		57F82D8524C4830B004C443A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57F82D8424C4830B004C443A /* BBQMeetup.app */,
+				57F82D9F24C483B4004C443A /* BBQMeetupTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57F82D8624C4830B004C443A /* BBQMeetup */ = {
+			isa = PBXGroup;
+			children = (
+				57F82D8724C4830B004C443A /* AppDelegate.swift */,
+				57F82D8924C4830B004C443A /* SceneDelegate.swift */,
+				57F82D8B24C4830B004C443A /* LoginViewController.swift */,
+				57F82DB124C4EBCA004C443A /* BBQItemsViewController.swift */,
+				57F82D8D24C4830B004C443A /* Main.storyboard */,
+				57F82D9024C4830E004C443A /* Assets.xcassets */,
+				57F82D9224C4830E004C443A /* LaunchScreen.storyboard */,
+				57F82DAF24C4DD04004C443A /* GoogleService-Info.plist */,
+				57F82D9524C4830E004C443A /* Info.plist */,
+			);
+			path = BBQMeetup;
+			sourceTree = "<group>";
+		};
+		57F82DA024C483B4004C443A /* BBQMeetupTests */ = {
+			isa = PBXGroup;
+			children = (
+				57F82DA124C483B4004C443A /* BBQMeetupTests.swift */,
+				57F82DA924C483E9004C443A /* FirebaseAuthenticationTests.swift */,
+				57F82DAB24C483FE004C443A /* FirebaseFirestoreTests.swift */,
+				57F82DA324C483B4004C443A /* Info.plist */,
+			);
+			path = BBQMeetupTests;
+			sourceTree = "<group>";
+		};
+		8DE89F8D0E129D581A17BEE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0205DC7F49BF2E5D699C674C /* Pods_BBQMeetup.framework */,
+				3D4877AECB3F30071329E3C7 /* Pods_BBQMeetupTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		57F82D8324C4830B004C443A /* BBQMeetup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57F82D9824C4830E004C443A /* Build configuration list for PBXNativeTarget "BBQMeetup" */;
+			buildPhases = (
+				02CD7073E6D1ACD920185284 /* [CP] Check Pods Manifest.lock */,
+				57F82D8024C4830B004C443A /* Sources */,
+				57F82D8124C4830B004C443A /* Frameworks */,
+				57F82D8224C4830B004C443A /* Resources */,
+				DB54E9B7241DCE826EC919A6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BBQMeetup;
+			productName = BBQMeetup;
+			productReference = 57F82D8424C4830B004C443A /* BBQMeetup.app */;
+			productType = "com.apple.product-type.application";
+		};
+		57F82D9E24C483B4004C443A /* BBQMeetupTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57F82DA624C483B4004C443A /* Build configuration list for PBXNativeTarget "BBQMeetupTests" */;
+			buildPhases = (
+				6B6490E490DD8DDBE3AA8AAB /* [CP] Check Pods Manifest.lock */,
+				57F82D9B24C483B4004C443A /* Sources */,
+				57F82D9C24C483B4004C443A /* Frameworks */,
+				57F82D9D24C483B4004C443A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57F82DA524C483B4004C443A /* PBXTargetDependency */,
+			);
+			name = BBQMeetupTests;
+			productName = BBQMeetupTests;
+			productReference = 57F82D9F24C483B4004C443A /* BBQMeetupTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		57F82D7C24C4830B004C443A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Alex Paul";
+				TargetAttributes = {
+					57F82D8324C4830B004C443A = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					57F82D9E24C483B4004C443A = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 57F82D8324C4830B004C443A;
+					};
+				};
+			};
+			buildConfigurationList = 57F82D7F24C4830B004C443A /* Build configuration list for PBXProject "BBQMeetup" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 57F82D7B24C4830B004C443A;
+			productRefGroup = 57F82D8524C4830B004C443A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57F82D8324C4830B004C443A /* BBQMeetup */,
+				57F82D9E24C483B4004C443A /* BBQMeetupTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		57F82D8224C4830B004C443A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57F82D9424C4830E004C443A /* LaunchScreen.storyboard in Resources */,
+				57F82DB024C4DD04004C443A /* GoogleService-Info.plist in Resources */,
+				57F82D9124C4830E004C443A /* Assets.xcassets in Resources */,
+				57F82D8F24C4830B004C443A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57F82D9D24C483B4004C443A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02CD7073E6D1ACD920185284 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BBQMeetup-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B6490E490DD8DDBE3AA8AAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BBQMeetupTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB54E9B7241DCE826EC919A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BBQMeetup/Pods-BBQMeetup-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BBQMeetup/Pods-BBQMeetup-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BBQMeetup/Pods-BBQMeetup-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57F82D8024C4830B004C443A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57F82D8C24C4830B004C443A /* LoginViewController.swift in Sources */,
+				57F82DB224C4EBCA004C443A /* BBQItemsViewController.swift in Sources */,
+				57F82D8824C4830B004C443A /* AppDelegate.swift in Sources */,
+				57F82D8A24C4830B004C443A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57F82D9B24C483B4004C443A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57F82DAA24C483E9004C443A /* FirebaseAuthenticationTests.swift in Sources */,
+				57F82DAC24C483FE004C443A /* FirebaseFirestoreTests.swift in Sources */,
+				57F82DA224C483B4004C443A /* BBQMeetupTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57F82DA524C483B4004C443A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57F82D8324C4830B004C443A /* BBQMeetup */;
+			targetProxy = 57F82DA424C483B4004C443A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		57F82D8D24C4830B004C443A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57F82D8E24C4830B004C443A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		57F82D9224C4830E004C443A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57F82D9324C4830E004C443A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		57F82D9624C4830E004C443A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		57F82D9724C4830E004C443A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		57F82D9924C4830E004C443A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95AE03FC076D5DB9D5146D46 /* Pods-BBQMeetup.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZEKMNK5YD3;
+				INFOPLIST_FILE = BBQMeetup/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpaul.BBQMeetup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		57F82D9A24C4830E004C443A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF0A74333BEA49771861D775 /* Pods-BBQMeetup.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZEKMNK5YD3;
+				INFOPLIST_FILE = BBQMeetup/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpaul.BBQMeetup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		57F82DA724C483B4004C443A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 449FA2C407278B42114B85B3 /* Pods-BBQMeetupTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZEKMNK5YD3;
+				INFOPLIST_FILE = BBQMeetupTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpaul.BBQMeetupTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BBQMeetup.app/BBQMeetup";
+			};
+			name = Debug;
+		};
+		57F82DA824C483B4004C443A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78A1B904D570E748D6665815 /* Pods-BBQMeetupTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZEKMNK5YD3;
+				INFOPLIST_FILE = BBQMeetupTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpaul.BBQMeetupTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BBQMeetup.app/BBQMeetup";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		57F82D7F24C4830B004C443A /* Build configuration list for PBXProject "BBQMeetup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57F82D9624C4830E004C443A /* Debug */,
+				57F82D9724C4830E004C443A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57F82D9824C4830E004C443A /* Build configuration list for PBXNativeTarget "BBQMeetup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57F82D9924C4830E004C443A /* Debug */,
+				57F82D9A24C4830E004C443A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57F82DA624C483B4004C443A /* Build configuration list for PBXNativeTarget "BBQMeetupTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57F82DA724C483B4004C443A /* Debug */,
+				57F82DA824C483B4004C443A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 57F82D7C24C4830B004C443A /* Project object */;
+}

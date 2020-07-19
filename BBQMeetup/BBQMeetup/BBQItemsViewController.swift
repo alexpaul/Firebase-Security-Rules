@@ -40,7 +40,7 @@ class BBQItemsViewController: UIViewController {
     dataSource = DataSource(tableView: tableView, cellProvider: { (tableView, indexPath, item) -> UITableViewCell? in
       let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath)
       cell.textLabel?.text = item.name
-      cell.detailTextLabel?.text = item.personId
+      cell.detailTextLabel?.text = "Person bringing item: \(item.personId)"
       return cell
     })
     dataSource.defaultRowAnimation = .fade

@@ -5,7 +5,7 @@ Setting up Firebase Rules.
 ## Objective 
 
 * Create a Firebase Project. 
-* Review on what are Firebase Rules. 
+* Review what are Firebase Security Rules. 
 * Configure various Firebase rules based on business logic. 
 
 ## 0. Firebase Rules 

@@ -1,6 +1,6 @@
 ## Security Rules 
 
-## 1. Production Rule 
+## 1. Rule: no one can read or write to the database
 
 ```javascript 
 rules_version = '2';
@@ -13,7 +13,7 @@ service cloud.firestore {
 }
 ```
 
-## 2. Authentication Rule 
+## 2. Rule: only authentication users can read or write to database 
 
 ```javascript 
 rules_version = '2';

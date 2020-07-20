@@ -13,6 +13,10 @@
 		57EA62AF24C4EFD900670375 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA62AE24C4EFD900670375 /* ItemType.swift */; };
 		57EA62B124C4F51300670375 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA62B024C4F51300670375 /* DataSource.swift */; };
 		57EA62B324C5076500670375 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA62B224C5076500670375 /* AddItemViewController.swift */; };
+		57EA62B524C51B3F00670375 /* UIViewController+ResetWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA62B424C51B3F00670375 /* UIViewController+ResetWindow.swift */; };
+		57EA62B724C51E9D00670375 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA62B624C51E9D00670375 /* AuthService.swift */; };
+		57EA62B924C5200800670375 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA62B824C5200800670375 /* Person.swift */; };
+		57EA62BB24C5261900670375 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA62BA24C5261900670375 /* String+Extensions.swift */; };
 		57F82D8824C4830B004C443A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F82D8724C4830B004C443A /* AppDelegate.swift */; };
 		57F82D8A24C4830B004C443A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F82D8924C4830B004C443A /* SceneDelegate.swift */; };
 		57F82D8C24C4830B004C443A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F82D8B24C4830B004C443A /* LoginViewController.swift */; };
@@ -46,6 +50,10 @@
 		57EA62AE24C4EFD900670375 /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
 		57EA62B024C4F51300670375 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		57EA62B224C5076500670375 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		57EA62B424C51B3F00670375 /* UIViewController+ResetWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ResetWindow.swift"; sourceTree = "<group>"; };
+		57EA62B624C51E9D00670375 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		57EA62B824C5200800670375 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		57EA62BA24C5261900670375 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		57F82D8424C4830B004C443A /* BBQMeetup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBQMeetup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F82D8724C4830B004C443A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57F82D8924C4830B004C443A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,14 +133,18 @@
 				57F82D8B24C4830B004C443A /* LoginViewController.swift */,
 				57F82DB124C4EBCA004C443A /* BBQItemsViewController.swift */,
 				57EA62B224C5076500670375 /* AddItemViewController.swift */,
+				57EA62B624C51E9D00670375 /* AuthService.swift */,
 				57EA62AA24C4EF0B00670375 /* DatabaseService.swift */,
 				57EA62B024C4F51300670375 /* DataSource.swift */,
 				57EA62AE24C4EFD900670375 /* ItemType.swift */,
 				57EA62AC24C4EF8000670375 /* Item.swift */,
+				57EA62B824C5200800670375 /* Person.swift */,
 				57F82D8D24C4830B004C443A /* Main.storyboard */,
 				57F82D9024C4830E004C443A /* Assets.xcassets */,
 				57F82D9224C4830E004C443A /* LaunchScreen.storyboard */,
 				57F82DAF24C4DD04004C443A /* GoogleService-Info.plist */,
+				57EA62B424C51B3F00670375 /* UIViewController+ResetWindow.swift */,
+				57EA62BA24C5261900670375 /* String+Extensions.swift */,
 				57F82D9524C4830E004C443A /* Info.plist */,
 			);
 			path = BBQMeetup;
@@ -328,11 +340,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				57EA62AF24C4EFD900670375 /* ItemType.swift in Sources */,
+				57EA62BB24C5261900670375 /* String+Extensions.swift in Sources */,
 				57F82D8C24C4830B004C443A /* LoginViewController.swift in Sources */,
 				57EA62AB24C4EF0B00670375 /* DatabaseService.swift in Sources */,
 				57F82DB224C4EBCA004C443A /* BBQItemsViewController.swift in Sources */,
 				57F82D8824C4830B004C443A /* AppDelegate.swift in Sources */,
+				57EA62B724C51E9D00670375 /* AuthService.swift in Sources */,
+				57EA62B924C5200800670375 /* Person.swift in Sources */,
 				57EA62B324C5076500670375 /* AddItemViewController.swift in Sources */,
+				57EA62B524C51B3F00670375 /* UIViewController+ResetWindow.swift in Sources */,
 				57EA62AD24C4EF8000670375 /* Item.swift in Sources */,
 				57EA62B124C4F51300670375 /* DataSource.swift in Sources */,
 				57F82D8A24C4830B004C443A /* SceneDelegate.swift in Sources */,

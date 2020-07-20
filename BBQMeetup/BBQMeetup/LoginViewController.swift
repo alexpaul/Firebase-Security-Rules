@@ -9,12 +9,47 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+  
+  @IBOutlet weak var emailTextField: UITextField!
+  @IBOutlet weak var passwordTextField: UITextField!
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
   }
+  
+  @IBAction func signUp(_ sender: UIButton) {
+    let email = validateEmailAndPassword().email
+    let password = validateEmailAndPassword().password
+    if validateEmailAndPassword().succes {
+      AuthService.shared.createUser(with: email, and: password) { [weak self] (result) in
+        switch result {
+        case .failure(let error):
+          print(error)
+        case .success:
+          print("new user created")
+          self?.showViewController(with: "BBQNavController")
+        }
+      }
+    }
+  }
+  
 
-
+  @IBAction func signIn(_ sender: UIButton) {
+    if validateEmailAndPassword().succes {
+      
+    }
+  }
+  
+  private func validateEmailAndPassword() -> (succes: Bool, email: String, password: String) {
+    guard let email = emailTextField.text,
+      !email.isEmpty,
+      let password = passwordTextField.text,
+      !password.isEmpty else {
+        print("missing fields")
+        return (false, "", "")
+    }
+    return (true, email, password)
+  }
+  
 }
 

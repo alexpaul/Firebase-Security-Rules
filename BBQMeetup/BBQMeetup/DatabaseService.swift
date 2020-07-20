@@ -11,6 +11,7 @@ import FirebaseFirestore
 
 struct Collection {
   static let items = "items"
+  static let people = "people"
 }
 
 class DatabaseService {

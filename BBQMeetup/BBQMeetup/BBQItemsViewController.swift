@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseFirestore
+import FirebaseAuth
 
 class BBQItemsViewController: UIViewController {
 
@@ -40,7 +41,7 @@ class BBQItemsViewController: UIViewController {
     dataSource = DataSource(tableView: tableView, cellProvider: { (tableView, indexPath, item) -> UITableViewCell? in
       let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath)
       cell.textLabel?.text = item.name
-      cell.detailTextLabel?.text = "Person bringing item: \(item.personId)"
+      cell.detailTextLabel?.text = "Person bringing item: @\(item.personName)"
       return cell
     })
     dataSource.defaultRowAnimation = .fade
@@ -62,6 +63,12 @@ class BBQItemsViewController: UIViewController {
     }
     dataSource.apply(snapshot, animatingDifferences: false)
   }
+  
+  @IBAction func signOut(_ sender: UIBarButtonItem) {
+    try? Auth.auth().signOut()
+    showViewController(with: "LoginViewController")
+  }
+  
 }
 
 extension BBQItemsViewController: AddItemViewControllerDelegate {

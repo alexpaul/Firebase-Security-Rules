@@ -32,13 +32,15 @@ class AddItemViewController: UIViewController {
     guard let itemName = itemNameTextField.text,
       !itemName.isEmpty,
       let selectedItemType = selectedItemType,
-      let user = Auth.auth().currentUser else {
+      let user = Auth.auth().currentUser,
+      let personName = user.displayName else {
         print("missing fields")
         return
     }
     let item = Item(itemId: UUID().uuidString,
                     name: itemName,
                     personId: user.uid,
+                    personName: personName,
                     servings: 0,
                     type: selectedItemType.rawValue)
     delegate?.didAddItem(self, item: item)

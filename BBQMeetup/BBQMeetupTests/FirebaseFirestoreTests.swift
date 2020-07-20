@@ -30,6 +30,16 @@ class FirebaseFirestoreTests: XCTestCase {
       if let error = error {
         XCTFail("failed to create auth user with error: \(error.localizedDescription)")
       }
+      
+      guard let user = Auth.auth().currentUser else {
+        XCTFail("failed to locate current user")
+        return
+      }
+      
+      let changeRequest = user.createProfileChangeRequest()
+      changeRequest.displayName = nameEmail.name
+      changeRequest.commitChanges()
+      
       Firestore.firestore().collection(collectionName).document(personId).setData(personDict) { (error) in
         exp.fulfill()
         if let error = error {

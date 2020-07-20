@@ -105,6 +105,64 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		57EA62BC24C52B7700670375 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				57EA62B424C51B3F00670375 /* UIViewController+ResetWindow.swift */,
+				57EA62BA24C5261900670375 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		57EA62BD24C52B8300670375 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57F82D8B24C4830B004C443A /* LoginViewController.swift */,
+				57F82DB124C4EBCA004C443A /* BBQItemsViewController.swift */,
+				57EA62B224C5076500670375 /* AddItemViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		57EA62BE24C52B9600670375 /* Firebase Services */ = {
+			isa = PBXGroup;
+			children = (
+				57EA62B624C51E9D00670375 /* AuthService.swift */,
+				57EA62AA24C4EF0B00670375 /* DatabaseService.swift */,
+			);
+			path = "Firebase Services";
+			sourceTree = "<group>";
+		};
+		57EA62BF24C52BAA00670375 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				57EA62AE24C4EFD900670375 /* ItemType.swift */,
+				57EA62AC24C4EF8000670375 /* Item.swift */,
+				57EA62B824C5200800670375 /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		57EA62C024C52BC200670375 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				57F82D8724C4830B004C443A /* AppDelegate.swift */,
+				57F82D8924C4830B004C443A /* SceneDelegate.swift */,
+				57F82D8D24C4830B004C443A /* Main.storyboard */,
+				57F82D9024C4830E004C443A /* Assets.xcassets */,
+				57F82D9224C4830E004C443A /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		57EA62C124C52C2700670375 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				57EA62B024C4F51300670375 /* DataSource.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		57F82D7B24C4830B004C443A = {
 			isa = PBXGroup;
 			children = (
@@ -128,24 +186,14 @@
 		57F82D8624C4830B004C443A /* BBQMeetup */ = {
 			isa = PBXGroup;
 			children = (
-				57F82D8724C4830B004C443A /* AppDelegate.swift */,
-				57F82D8924C4830B004C443A /* SceneDelegate.swift */,
-				57F82D8B24C4830B004C443A /* LoginViewController.swift */,
-				57F82DB124C4EBCA004C443A /* BBQItemsViewController.swift */,
-				57EA62B224C5076500670375 /* AddItemViewController.swift */,
-				57EA62B624C51E9D00670375 /* AuthService.swift */,
-				57EA62AA24C4EF0B00670375 /* DatabaseService.swift */,
-				57EA62B024C4F51300670375 /* DataSource.swift */,
-				57EA62AE24C4EFD900670375 /* ItemType.swift */,
-				57EA62AC24C4EF8000670375 /* Item.swift */,
-				57EA62B824C5200800670375 /* Person.swift */,
-				57F82D8D24C4830B004C443A /* Main.storyboard */,
-				57F82D9024C4830E004C443A /* Assets.xcassets */,
-				57F82D9224C4830E004C443A /* LaunchScreen.storyboard */,
-				57F82DAF24C4DD04004C443A /* GoogleService-Info.plist */,
-				57EA62B424C51B3F00670375 /* UIViewController+ResetWindow.swift */,
-				57EA62BA24C5261900670375 /* String+Extensions.swift */,
+				57EA62BE24C52B9600670375 /* Firebase Services */,
+				57EA62BF24C52BAA00670375 /* Models */,
+				57EA62BD24C52B8300670375 /* Controllers */,
+				57EA62C124C52C2700670375 /* Utilities */,
+				57EA62BC24C52B7700670375 /* Extensions */,
+				57EA62C024C52BC200670375 /* Supporting Files */,
 				57F82D9524C4830E004C443A /* Info.plist */,
+				57F82DAF24C4DD04004C443A /* GoogleService-Info.plist */,
 			);
 			path = BBQMeetup;
 			sourceTree = "<group>";
@@ -525,7 +573,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpaul.BBQMeetup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -545,7 +593,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpaul.BBQMeetup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

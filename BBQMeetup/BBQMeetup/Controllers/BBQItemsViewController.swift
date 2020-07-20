@@ -73,18 +73,9 @@ class BBQItemsViewController: UIViewController {
 
 extension BBQItemsViewController: AddItemViewControllerDelegate {
   func didAddItem(_ addItemViewController: AddItemViewController, item: Item) {
-    guard let itemType = ItemType(rawValue: item.type) else {
-      return
-    }
-    DatabaseService.shared.addItem(item: item) { [weak self] (result) in
-      guard let self = self else { return }
-      switch result {
-      case .failure(let error):
-        print(error)
-      case .success:
-        var snapshot = self.dataSource.snapshot()
-        snapshot.appendItems([item], toSection: itemType)
-        self.dataSource.apply(snapshot, animatingDifferences: true)
+    DatabaseService.shared.addItem(item: item) { (result) in
+      if case let .failure(error) = result {
+        print("failed to add item with error: \(error.localizedDescription)")
       }
     }
   }

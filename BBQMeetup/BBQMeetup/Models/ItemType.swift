@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 enum ItemType: String, CaseIterable, Comparable {
   case seafood = "Seafood"
   case drink = "Drink"
@@ -21,7 +20,4 @@ extension ItemType {
   static func <(lhs: ItemType, rhs: ItemType) -> Bool {
     return lhs.rawValue < rhs.rawValue
   }
-//  static func >(lhs: ItemType, rhs: ItemType) -> Bool {
-//    return lhs.rawValue > rhs.rawValue
-//  }
 }

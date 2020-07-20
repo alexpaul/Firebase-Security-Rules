@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
   
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
   }
@@ -33,10 +33,20 @@ class LoginViewController: UIViewController {
     }
   }
   
-
+  
   @IBAction func signIn(_ sender: UIButton) {
+    let email = validateEmailAndPassword().email
+    let password = validateEmailAndPassword().password
     if validateEmailAndPassword().succes {
-      
+      AuthService.shared.signInUser(with: email, and: password) { [weak self] (result) in
+        switch result {
+        case .failure(let error):
+          print(error)
+        case .success:
+          print("new user created")
+          self?.showViewController(with: "BBQNavController")
+        }
+      }
     }
   }
   

@@ -46,9 +46,13 @@ class AuthService {
     }
   }
   
-  func signInUser(with email: String, and password: String) {
+  func signInUser(with email: String, and password: String, completion: @escaping (Result<Bool, Error>) -> ()) {
     Auth.auth().signIn(withEmail: email, password: password) { (authDataResult, error) in
-      
+      if let error = error {
+        completion(.failure(error))
+        return
+      }
+      completion(.success(true))
     }
   }
 }

@@ -10,7 +10,8 @@ import UIKit
 
 class DataSource: UITableViewDiffableDataSource<ItemType, Item> {
   override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    return ItemType.allCases[section].rawValue
+    let sections = ItemType.allCases.sorted { $0 < $1 }
+    return sections[section].rawValue
   }
   
   override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

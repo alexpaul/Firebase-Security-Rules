@@ -9,10 +9,19 @@
 import Foundation
 
 
-enum ItemType: String, CaseIterable {
-    case seafood
-    case drink
-    case meat
-    case game
-    case dessert
+enum ItemType: String, CaseIterable, Comparable {
+  case seafood = "Seafood"
+  case drink = "Drink"
+  case meat = "Meat"
+  case game = "Game"
+  case dessert = "Dessert"
+}
+
+extension ItemType {
+  static func <(lhs: ItemType, rhs: ItemType) -> Bool {
+    return lhs.rawValue < rhs.rawValue
   }
+//  static func >(lhs: ItemType, rhs: ItemType) -> Bool {
+//    return lhs.rawValue > rhs.rawValue
+//  }
+}

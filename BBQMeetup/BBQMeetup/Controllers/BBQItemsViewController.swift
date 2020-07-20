@@ -46,7 +46,8 @@ class BBQItemsViewController: UIViewController {
     })
     dataSource.defaultRowAnimation = .fade
     var snapshot = NSDiffableDataSourceSnapshot<ItemType, Item>()
-    for type in ItemType.allCases {
+    let sections = ItemType.allCases.sorted { $0 < $1 }
+    for type in sections {
       snapshot.appendSections([type])
     }
     dataSource.apply(snapshot, animatingDifferences: false)
@@ -55,7 +56,8 @@ class BBQItemsViewController: UIViewController {
   private func updateUI(querySnapshot: QuerySnapshot) {
     let itemsCollection = querySnapshot.documents.compactMap { Item(dict: $0.data()) }
     var snapshot = dataSource.snapshot()
-    for type in ItemType.allCases {
+    let sections = ItemType.allCases.sorted { $0 < $1 }
+    for type in sections {
       snapshot.deleteSections([type])
       snapshot.appendSections([type])
       let items = itemsCollection.filter { $0.type == type.rawValue }

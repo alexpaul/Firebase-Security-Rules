@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class DataSource: UITableViewDiffableDataSource<ItemType, Item> {
   override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -15,6 +16,13 @@ class DataSource: UITableViewDiffableDataSource<ItemType, Item> {
   }
   
   override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    // Client security rule to prevent accidental deletion from another user
+    guard let user = Auth.auth().currentUser else {
+      return false
+    }
+    if let item = itemIdentifier(for: indexPath) {
+      if item.personId != user.uid { return false }
+    }
     return true
   }
   

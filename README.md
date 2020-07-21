@@ -190,23 +190,27 @@ rules_version = '2';
 service cloud.firestore {
   	// people collections
   	match /people/{person} {
+      // 1
     	allow read, write: if request.auth.uid != null; 
     }
   	// items collection
     match /items/{item} {
-    	// allow non-account users to explore, they can ONLY read 
+      // 2
     	allow read: if true; 
-      // can ONLY create an item if you an authenticated user
-      // data validation - assure name is longer that 2 characters
+      // 3
       allow create: if request.auth.uid != null 
       	&& request.resource.data.name.size() > 2;
-      // this will ONLY allow the user that created an item to delete it 
-      // resourse.data is the dictionary { json } object sent up to Firebase
+      // 4
       allow delete: if request.auth.uid == resource.data.personId;
     }
   }
 }
 ```
+
+1. **alllow** read, write access to the people collection to ONLY authentication users.
+2. **allow** non-authenticated users can ONLY read from the `items` collection. 
+3. **allow** create access to ONLY authenticated users and the item name has to be longer than 2 characters. 
+4. **alllow** delete of an item ONLY to the person who created it. 
 
 ## Resources 
 

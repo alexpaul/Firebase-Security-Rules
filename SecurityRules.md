@@ -1,5 +1,7 @@
 ## Security Rules 
 
+Firebase security rules allows read, write access and data validations to Firestore and Storage. 
+
 ## 1. Rule: no one can read or write to the database
 
 ```javascript 

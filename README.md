@@ -185,21 +185,21 @@ allow create: if request.auth.uid != null && request.resource.data.name.size() >
 
 ## 8. Final rules for the BBQMeetup app 
 
-```
+```javascript
 rules_version = '2';
 service cloud.firestore {
-  	// people collections
-  	match /people/{person} {
+    // people collections
+    match /people/{person} {
       // 1
-    	allow read, write: if request.auth.uid != null; 
+      allow read, write: if request.auth.uid != null; 
     }
-  	// items collection
+    // items collection
     match /items/{item} {
       // 2
-    	allow read: if true; 
+      allow read: if true; 
       // 3
       allow create: if request.auth.uid != null 
-      	&& request.resource.data.name.size() > 2;
+        && request.resource.data.name.size() > 2;
       // 4
       allow delete: if request.auth.uid == resource.data.personId;
     }

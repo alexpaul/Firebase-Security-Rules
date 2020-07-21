@@ -13,6 +13,10 @@ This repo has an included `Google-Info.plist` file for public access which allow
 
 Firebase rules has a similar structure to Javascript and JSON. It's a language based on the [Common Expression Language (CEL)]() that uses `match` and `allow` statements that support conditionally granted access. 
 
+## An example use case 
+
+In an app you may want to allow a blogger to **delete** their post from a feed but prevent another blogger from accidentally deleting that post. This is where Firebase security rules shines. It's fine to write this rule in the client app but it's best practice to have this login on your server, in this case Firebase Firestore or Firebase storage.
+
 #### Basic structure 
 
 ```javascript 

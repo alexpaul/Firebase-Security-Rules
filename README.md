@@ -5,6 +5,10 @@
 * Review what are Firebase Security Rules. 
 * Configure various Firebase rules based on business logic. 
 
+## Installation 
+
+This repo has an included `Google-Info.plist` file for public access which allows multiple users to be on the same Firebase app. However feel free to create your own Firebase console project and download the associated `Google-Info.plist` to test security rules. 
+
 ## Firebase Rules 
 
 Firebase rules has a similar structure to Javascript and JSON. It's a language based on the [Common Expression Language (CEL)]() that uses `match` and `allow` statements that support conditionally granted access. 

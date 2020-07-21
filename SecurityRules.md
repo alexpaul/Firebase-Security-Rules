@@ -13,6 +13,11 @@ service cloud.firestore {
 }
 ```
 
+Xcode console error
+```
+Missing or insufficient permissions.
+```
+
 ## 2. Rule: only authentication users can read or write to database 
 
 ```javascript 
@@ -26,15 +31,23 @@ service cloud.firestore {
 }
 ```
 
+> Anyone that's authenticated can read and write to any document and collection. 
+
 ## 3. Rule: only user that created content is allowed to delete it 
 
 ```javascript 
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /{document=**} {
-    	allow read: if request.auth.uid != null;
-      allow create: if request.auth.uid != null;
+  	// people collections
+  	match /people/{person} {
+    	allow read, write: if request.auth.uid != null; 
+    }
+  	// items collection
+    match /items/{item} {
+    	allow read, create: if request.auth.uid != null;
+      // this will ONLY allow the user that created an item to delete it 
+      // resourse.data is the dictionary { json } object sent up to Firebase
       allow delete: if request.auth.uid == resource.data.personId;
     }
   }

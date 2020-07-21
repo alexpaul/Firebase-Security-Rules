@@ -54,7 +54,7 @@ service cloud.firestore {
 }
 ```
 
-## 4. Rule: allows a non-account user to explore the app 
+## 4. Rule: allow a non-account user to explore the app 
 
 ```javascript 
 rules_version = '2';

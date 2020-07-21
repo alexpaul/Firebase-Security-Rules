@@ -183,7 +183,7 @@ service cloud.firestore {
 allow create: if request.auth.uid != null && request.resource.data.name.size() > 2;
 ```
 
-## 8. Final rules for the BBQMeetup app 
+## 8. Rules for the BBQMeetup app 
 
 ```javascript
 rules_version = '2';
@@ -211,6 +211,8 @@ service cloud.firestore {
 2. **allow** non-authenticated users can ONLY read from the `items` collection. 
 3. **allow** create access to ONLY authenticated users and the item name has to be longer than 2 characters. 
 4. **alllow** delete of an item ONLY to the person who created it. 
+
+> More rules can be implemented above such as no delete of a person document, or only the account creator can delete a document. Rules provide robust security for your application so fully review business logic and use cases for your Firebase rules. 
 
 ## Resources 
 

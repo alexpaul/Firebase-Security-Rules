@@ -14,9 +14,7 @@ Firebase security rules allows read, write access and data validations to Firest
 3. update
 
 
-## Request 
-
-1. auth 
+## Request and Resource example rules
 
 ```javascipt 
 request.auth != null 
@@ -25,8 +23,6 @@ request.auth != null
 ```javascipt 
 request.auth.uid
 ```
-
-2. resource 
 
 ```javascipt 
 request.resource.data.price
@@ -51,6 +47,10 @@ request.resource.data.itemName.size() > 2
 
 ```javascipt 
 request.resource.data.reviewId == request.auth.uid
+```
+
+```javascipt 
+allow read: if resource.data.published == "published" || resource.data.reviewerId == request.auth.uid
 ```
 
 

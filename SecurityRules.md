@@ -35,7 +35,7 @@ service cloud.firestore {
 
 ## 3. Rule: only user that created content is allowed to delete it 
 
-```javascript 
+```cel 
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {

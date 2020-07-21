@@ -23,9 +23,9 @@ service <<name>> {
 
 ## 1. Security Rules 
 
-Firebase security rules allow read, write access and data validation to Firebase Firestore and Firebase Storage. 
+Firebase security rules allow read, write access and data validation of Firebase Firestore and Firebase Storage. 
 
-## Document access: 
+## Document access functions: 
 
 #### Read
 1. get 
@@ -37,7 +37,11 @@ Firebase security rules allow read, write access and data validation to Firebase
 3. update
 
 
-## 2. Request and Resource samples 
+## 2. Some request and resource rules examples 
+
+**request**: the data being sent up to Firebase by the client app. 
+
+**resource**: the data as it exists on Firebase. 
 
 #### 1. Make sure the user is authenticated 
 

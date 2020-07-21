@@ -40,7 +40,7 @@ class AddItemViewController: UIViewController {
       !itemName.isEmpty,
       let selectedItemType = selectedItemType,
       let personName = user.displayName else {
-        print("missing fields")
+        showAlert(title: "Missing Fields", message: "All fields are required.")
         return
     }
     let item = Item(itemId: UUID().uuidString,

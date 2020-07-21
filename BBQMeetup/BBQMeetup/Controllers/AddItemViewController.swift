@@ -29,10 +29,16 @@ class AddItemViewController: UIViewController {
   }
     
   @IBAction func addItemToBBQList(_ sender: UIButton) {
+    guard let user = Auth.auth().currentUser else {
+      showAlert(title: "No Account Detected", message: "You need to be logged in to use this feature.") { action in
+        self.dismiss(animated: true)
+      }
+      return
+    }
+    
     guard let itemName = itemNameTextField.text,
       !itemName.isEmpty,
       let selectedItemType = selectedItemType,
-      let user = Auth.auth().currentUser,
       let personName = user.displayName else {
         print("missing fields")
         return

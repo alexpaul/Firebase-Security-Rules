@@ -17,6 +17,7 @@
 		57EA62B724C51E9D00670375 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA62B624C51E9D00670375 /* AuthService.swift */; };
 		57EA62B924C5200800670375 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA62B824C5200800670375 /* Person.swift */; };
 		57EA62BB24C5261900670375 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA62BA24C5261900670375 /* String+Extensions.swift */; };
+		57ED7B2724C673DA001B5494 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED7B2624C673DA001B5494 /* UIViewController+Alerts.swift */; };
 		57F82D8824C4830B004C443A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F82D8724C4830B004C443A /* AppDelegate.swift */; };
 		57F82D8A24C4830B004C443A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F82D8924C4830B004C443A /* SceneDelegate.swift */; };
 		57F82D8C24C4830B004C443A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F82D8B24C4830B004C443A /* LoginViewController.swift */; };
@@ -54,6 +55,7 @@
 		57EA62B624C51E9D00670375 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		57EA62B824C5200800670375 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		57EA62BA24C5261900670375 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		57ED7B2624C673DA001B5494 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		57F82D8424C4830B004C443A /* BBQMeetup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBQMeetup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F82D8724C4830B004C443A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57F82D8924C4830B004C443A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				57EA62B424C51B3F00670375 /* UIViewController+ResetWindow.swift */,
+				57ED7B2624C673DA001B5494 /* UIViewController+Alerts.swift */,
 				57EA62BA24C5261900670375 /* String+Extensions.swift */,
 			);
 			path = Extensions;
@@ -392,6 +395,7 @@
 				57F82D8C24C4830B004C443A /* LoginViewController.swift in Sources */,
 				57EA62AB24C4EF0B00670375 /* DatabaseService.swift in Sources */,
 				57F82DB224C4EBCA004C443A /* BBQItemsViewController.swift in Sources */,
+				57ED7B2724C673DA001B5494 /* UIViewController+Alerts.swift in Sources */,
 				57F82D8824C4830B004C443A /* AppDelegate.swift in Sources */,
 				57EA62B724C51E9D00670375 /* AuthService.swift in Sources */,
 				57EA62B924C5200800670375 /* Person.swift in Sources */,

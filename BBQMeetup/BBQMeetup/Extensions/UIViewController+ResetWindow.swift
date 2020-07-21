@@ -9,7 +9,6 @@
 import UIKit
 
 extension UIViewController {
-  
   private func resetWindow(with vc: UIViewController?) {
     guard let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate else {
       fatalError("could not get scene delegate ")
@@ -21,6 +20,4 @@ extension UIViewController {
     let vc = storyboard?.instantiateViewController(identifier: id)
     resetWindow(with: vc)
   }
-  
-  
 }

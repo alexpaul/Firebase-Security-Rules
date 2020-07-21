@@ -26,8 +26,8 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ae-DF-7Y1">
-                                <rect key="frame" x="180" y="322" width="54" height="30"/>
-                                <state key="normal" title="Sign Up"/>
+                                <rect key="frame" x="161" y="322" width="92" height="30"/>
+                                <state key="normal" title="New Account"/>
                                 <connections>
                                     <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="az0-c3-NlD"/>
                                 </connections>
@@ -35,10 +35,13 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIA-nl-POo">
                                 <rect key="frame" x="342" y="64" width="52" height="30"/>
                                 <state key="normal" title="Explore"/>
+                                <connections>
+                                    <action selector="explore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="had-Ix-Sp0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cA2-sk-9jW">
-                                <rect key="frame" x="183.5" y="372" width="47" height="30"/>
-                                <state key="normal" title="Sign In"/>
+                                <rect key="frame" x="149.5" y="372" width="115" height="30"/>
+                                <state key="normal" title="Existing Account"/>
                                 <connections>
                                     <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DSG-GH-Ze5"/>
                                 </connections>

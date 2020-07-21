@@ -50,6 +50,11 @@ class LoginViewController: UIViewController {
     }
   }
   
+  @IBAction func explore(_ sender: UIButton) {
+    showViewController(with: "BBQNavController")
+  }
+  
+  
   private func validateEmailAndPassword() -> (succes: Bool, email: String, password: String) {
     guard let email = emailTextField.text,
       !email.isEmpty,

@@ -53,3 +53,27 @@ service cloud.firestore {
   }
 }
 ```
+
+## 4. Rule: allows a non-account user to explore the app 
+
+```javascript 
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+  	// people collections
+  	match /people/{person} {
+    	allow read, write: if request.auth.uid != null; 
+    }
+  	// items collection
+    match /items/{item} {
+    	// allow non-account users to explore, they can ONLY read 
+    	allow read: if true; 
+      // can ONLY create an item if you an authenticated user
+      allow create: if request.auth.uid != null;
+      // this will ONLY allow the user that created an item to delete it 
+      // resourse.data is the dictionary { json } object sent up to Firebase
+      allow delete: if request.auth.uid == resource.data.personId;
+    }
+  }
+}
+```

@@ -89,5 +89,5 @@ allow create: if request.auth.uid != null && request.resource.data.name.size() >
 
 ## Resources 
 
-[Firesbase Security Rules](https://firebase.google.com/docs/rules)
-[Video - Security Rules](https://www.youtube.com/watch?v=eW5MdE3ZcAw)
+1. [Firesbase Security Rules](https://firebase.google.com/docs/rules)
+2. [Firebasse Video - Security Rules](https://www.youtube.com/watch?v=eW5MdE3ZcAw)

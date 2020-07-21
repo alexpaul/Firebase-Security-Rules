@@ -185,7 +185,7 @@ allow create: if request.auth.uid != null && request.resource.data.name.size() >
 
 ## 8. Final rules for the BBQMeetup app 
 
-```javascript
+```
 rules_version = '2';
 service cloud.firestore {
   	// people collections

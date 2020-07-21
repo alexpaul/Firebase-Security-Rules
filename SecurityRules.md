@@ -2,6 +2,58 @@
 
 Firebase security rules allows read, write access and data validations to Firestore and Storage. 
 
+## Document access: 
+
+#### Read
+1. get 
+2. list 
+
+#### Write 
+1. create 
+2. delete 
+3. update
+
+
+## Request 
+
+1. auth 
+
+```javascipt 
+request.auth != null 
+```
+
+```javascipt 
+request.auth.uid
+```
+
+2. resource 
+
+```javascipt 
+request.resource.data.price
+```
+
+```javascipt 
+request.resource.data.cohort >= 4 && request.resource.data.cohort <= 6
+```
+
+
+```javascipt 
+request.resource.data.price is number
+```
+
+```javascipt 
+request.resource.data.name is string
+```
+
+```javascipt 
+request.resource.data.itemName.size() > 2
+```
+
+```javascipt 
+request.resource.data.reviewId == request.auth.uid
+```
+
+
 ## 1. Rule: no one can read or write to the database
 
 ```javascript 

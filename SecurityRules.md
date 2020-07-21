@@ -77,3 +77,10 @@ service cloud.firestore {
   }
 }
 ```
+
+## 5. Data validation 
+
+```javascript 
+// data validation - assure name is longer that 2 characters
+allow create: if request.auth.uid != null && request.resource.data.name.size() > 2;
+```

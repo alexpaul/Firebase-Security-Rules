@@ -86,3 +86,7 @@ service cloud.firestore {
 // data validation - assure name is longer that 2 characters
 allow create: if request.auth.uid != null && request.resource.data.name.size() > 2;
 ```
+
+## Resources 
+
+[Firesbase Security Rules](https://firebase.google.com/docs/rules)

@@ -1,6 +1,6 @@
 ## Security Rules 
 
-Firebase security rules allows read, write access and data validations to Firestore and Storage. 
+Firebase security rules allow read, write access and data validation to Firebase Firestore and Firebase Storage. 
 
 ## Document access: 
 

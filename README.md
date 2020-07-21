@@ -217,7 +217,7 @@ service cloud.firestore {
 
 1. **alllow** read, write access to the people collection to ONLY authentication users.
 2. **allow** non-authenticated users can ONLY read from the `items` collection. 
-3. **allow** create access to ONLY authenticated users and the item name has to be longer than 2 characters. 
+3. **allow** create access to ONLY to authenticated users and ensure that the new item's name is longer than 2 characters. 
 4. **alllow** delete of an item ONLY to the person who created it. 
 
 > More rules can be implemented above such as no delete of a person document, or only the account creator can delete a document. Rules provide robust security for your application so fully review business logic and use cases for your Firebase rules. 

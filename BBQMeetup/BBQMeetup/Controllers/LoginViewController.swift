@@ -9,13 +9,8 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-  
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
   
   @IBAction func signUp(_ sender: UIButton) {
     let email = validateEmailAndPassword().email
@@ -32,7 +27,6 @@ class LoginViewController: UIViewController {
       }
     }
   }
-  
   
   @IBAction func signIn(_ sender: UIButton) {
     let email = validateEmailAndPassword().email
@@ -54,7 +48,6 @@ class LoginViewController: UIViewController {
     showViewController(with: "BBQNavController")
   }
   
-  
   private func validateEmailAndPassword() -> (succes: Bool, email: String, password: String) {
     guard let email = emailTextField.text,
       !email.isEmpty,
@@ -65,6 +58,5 @@ class LoginViewController: UIViewController {
     }
     return (true, email, password)
   }
-  
 }
 

@@ -22,9 +22,7 @@ struct Item: Hashable {
   }
 }
 
-// tradional way in Firebase
 extension Item {
-  // tradional way in Firebase
   init?(dict: [String: Any]) {
     guard let itemId = dict["itemId"] as? String,
       let name = dict["name"] as? String,

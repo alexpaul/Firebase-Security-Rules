@@ -15,7 +15,6 @@ struct Collection {
 }
 
 class DatabaseService {
-  
   private init() {}
   static let shared = DatabaseService()
   

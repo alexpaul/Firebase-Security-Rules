@@ -11,7 +11,6 @@ import FirebaseFirestore
 import FirebaseAuth
 
 class BBQItemsViewController: UIViewController {
-
   @IBOutlet weak var tableView: UITableView!
   private var dataSource: DataSource!
 
@@ -70,7 +69,6 @@ class BBQItemsViewController: UIViewController {
     try? Auth.auth().signOut()
     showViewController(with: "LoginViewController")
   }
-  
 }
 
 extension BBQItemsViewController: AddItemViewControllerDelegate {

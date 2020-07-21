@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 extension String {
   func createNameFromEmail() -> String {
     let email = self as NSString

@@ -21,12 +21,10 @@ class AuthService {
         completion(.failure(error))
         return
       }
-      
       guard let user = Auth.auth().currentUser,
         let displayName = user.email?.createNameFromEmail() else {
         return
       }
-      
       let changeRequest = user.createProfileChangeRequest()
       changeRequest.displayName = displayName
       changeRequest.commitChanges()

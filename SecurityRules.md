@@ -90,3 +90,4 @@ allow create: if request.auth.uid != null && request.resource.data.name.size() >
 ## Resources 
 
 [Firesbase Security Rules](https://firebase.google.com/docs/rules)
+[Video - Security Rules](https://www.youtube.com/watch?v=eW5MdE3ZcAw)

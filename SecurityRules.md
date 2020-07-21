@@ -156,6 +156,31 @@ service cloud.firestore {
 allow create: if request.auth.uid != null && request.resource.data.name.size() > 2;
 ```
 
+## 6. Final rules for the BBQMeetup app 
+
+```javascript
+rules_version = '2';
+service cloud.firestore {
+  	// people collections
+  	match /people/{person} {
+    	allow read, write: if request.auth.uid != null; 
+    }
+  	// items collection
+    match /items/{item} {
+    	// allow non-account users to explore, they can ONLY read 
+    	allow read: if true; 
+      // can ONLY create an item if you an authenticated user
+      // data validation - assure name is longer that 2 characters
+      allow create: if request.auth.uid != null 
+      	&& request.resource.data.name.size() > 2;
+      // this will ONLY allow the user that created an item to delete it 
+      // resourse.data is the dictionary { json } object sent up to Firebase
+      allow delete: if request.auth.uid == resource.data.personId;
+    }
+  }
+}
+```
+
 ## Resources 
 
 1. [Firesbase Security Rules](https://firebase.google.com/docs/rules)
